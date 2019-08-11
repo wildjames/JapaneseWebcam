@@ -36,7 +36,7 @@ with open("Training_sample/data.txt") as f:
 
         # Get the image data (20x20)
         image_raw = tf.io.read_file(path)
-        image_tf  = tf.image.decode_image(image_raw, dtype=tf.dtypes.uint32)
+        image_tf  = tf.image.decode_image(image_raw, dtype=tf.dtypes.uint8)
 
         training_images.append(image_tf)
         training_answer.append(CHARLIST.index(value))
