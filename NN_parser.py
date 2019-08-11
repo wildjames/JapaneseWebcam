@@ -45,7 +45,7 @@ training_answer = np.asarray(training_answer)
 training_images = np.asarray(training_images)
 
 # Scale the images from 0 -> 255 to 0 -> 1
-training_images = training_images / 255.0
+training_images = training_images / tf.cast(255, tf.dtypes.uint8)
 
 # The above reads images as (X, Y, COLORS). Even when B/W, the COLORS are a
 # list of one. Flatten that out
